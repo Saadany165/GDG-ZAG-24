@@ -115,6 +115,7 @@ $posts= $conn->query("SELECT * FROM posts")->fetch_all(MYSQLI_ASSOC);
             <h1>Blog</h1>
             <?php if (!isset($_SESSION['user'])): ?>
             <a href="Auth/login.html" class="btn btn-delete">Login</a>
+            <a href="Auth/register.html" class="btn btn-create">Register</a>
             <?php endif;?>
             <?php if(isset($_SESSION['user'])): ?>
                 <a href="forms/createPost.html" class="btn btn-create">Create Post</a>
