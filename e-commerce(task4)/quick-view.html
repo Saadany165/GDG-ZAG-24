@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick View - Our Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <h2>Our Store</h2>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Products</a>
+                    <a href="cart.html">Cart <i class="fas fa-shopping-cart"></i></a>
+                    <a href="manage-cart.html">Manage Cart</a>
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick View Section -->
+    <section class="quick-view-section">
+        <div class="container">
+            <div class="quick-view-content">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&h=400&fit=crop" alt="MacBook Pro" id="mainImage">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=100&h=80&fit=crop" alt="MacBook Pro" class="thumbnail active">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=100&h=80&fit=crop" alt="MacBook Pro Side" class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=100&h=80&fit=crop" alt="MacBook Pro Detail" class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=100&h=80&fit=crop" alt="MacBook Pro Back" class="thumbnail">
+                    </div>
+                </div>
+
+                <!-- Product Details -->
+                <div class="product-details">
+                    <div class="product-header">
+                        <h1 id="productName">MacBook Pro 14"</h1>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price" id="currentPrice">$1,999</span>
+                    </div>
+
+                    <div class="product-description" id="productDescription">
+                        <p>Experience the power of Apple's M2 Pro chip with this stunning 14-inch MacBook Pro. Featuring 16GB of unified memory and a lightning-fast 512GB SSD, this laptop delivers exceptional performance for both work and creative tasks.</p>
+                        
+                        <div class="key-features">
+                            <h3>Key Features:</h3>
+                            <ul>
+                                <li><i class="fas fa-microchip"></i> Apple M2 Pro chip with 10-core CPU</li>
+                                <li><i class="fas fa-memory"></i> 16GB unified memory</li>
+                                <li><i class="fas fa-hdd"></i> 512GB SSD storage</li>
+                                <li><i class="fas fa-tv"></i> 14-inch Liquid Retina XDR display</li>
+                                <li><i class="fas fa-battery-full"></i> Up to 18 hours battery life</li>
+                                <li><i class="fas fa-camera"></i> 1080p FaceTime HD camera</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Color:</label>
+                            <div class="color-options">
+                                <button class="color-option active" data-color="Space Gray" style="background-color: #4a4a4a;"></button>
+                                <button class="color-option" data-color="Silver" style="background-color: #c0c0c0;"></button>
+                                <button class="color-option" data-color="Gold" style="background-color: #ffd700;"></button>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Storage:</label>
+                            <div class="storage-options">
+                                <button class="storage-option active" data-storage="512GB">512GB</button>
+                                <button class="storage-option" data-storage="1TB">1TB</button>
+                                <button class="storage-option" data-storage="2TB">2TB</button>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Memory:</label>
+                            <div class="memory-options">
+                                <button class="memory-option active" data-memory="16GB">16GB</button>
+                                <button class="memory-option" data-memory="32GB">32GB</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" max="10" class="quantity-input" id="quantityInput">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button class="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add to Cart
+                            </button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                            <button class="wishlist-btn">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-info-tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active">Specifications</button>
+                            <button class="tab-btn">Reviews</button>
+                            <button class="tab-btn">Shipping</button>
+                        </div>
+
+                        <div class="tab-content">
+                            <div id="specifications" class="tab-panel active">
+                                <h3>Technical Specifications</h3>
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Processor:</span>
+                                        <span class="spec-value">Apple M2 Pro chip</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Memory:</span>
+                                        <span class="spec-value">16GB unified memory</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Storage:</span>
+                                        <span class="spec-value">512GB SSD</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Display:</span>
+                                        <span class="spec-value">14-inch Liquid Retina XDR</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Graphics:</span>
+                                        <span class="spec-value">16-core GPU</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Battery:</span>
+                                        <span class="spec-value">Up to 18 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="reviews" class="tab-panel">
+                                <h3>Customer Reviews</h3>
+                                <div class="review-summary">
+                                    <div class="overall-rating">
+                                        <div class="rating-number">4.8</div>
+                                        <div class="total-reviews">Based on 127 reviews</div>
+                                    </div>
+                                </div>
+                                <div class="review-list">
+                                    <div class="review-item">
+                                        <div class="review-header">
+                                            <div class="reviewer-name">John D.</div>
+                                        </div>
+                                        <div class="review-text">"Amazing performance! The M2 Pro chip is incredibly fast and the battery life is outstanding."</div>
+                                    </div>
+                                    <div class="review-item">
+                                        <div class="review-header">
+                                            <div class="reviewer-name">Sarah M.</div>
+                                        </div>
+                                        <div class="review-text">"Great laptop for video editing. The display is beautiful and the performance is top-notch."</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="shipping" class="tab-panel">
+                                <h3>Shipping Information</h3>
+                                <div class="shipping-info">
+                                    <div class="shipping-option">
+                                        <i class="fas fa-shipping-fast"></i>
+                                        <div class="shipping-details">
+                                            <h4>Free Standard Shipping</h4>
+                                            <p>5-7 business days</p>
+                                        </div>
+                                    </div>
+                                    <div class="shipping-option">
+                                        <i class="fas fa-rocket"></i>
+                                        <div class="shipping-details">
+                                            <h4>Express Shipping</h4>
+                                            <p>2-3 business days - $25</p>
+                                        </div>
+                                    </div>
+                                    <div class="shipping-option">
+                                        <i class="fas fa-plane"></i>
+                                        <div class="shipping-details">
+                                            <h4>Overnight Shipping</h4>
+                                            <p>Next business day - $50</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Close Button -->
+            <button class="close-quick-view">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Our Store</h3>
+                    <p>Best online store for secure shopping</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="manage-cart.html">Manage Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@store.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Our Store. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

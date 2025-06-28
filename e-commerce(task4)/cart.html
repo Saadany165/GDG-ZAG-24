@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Our Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <h2>Our Store</h2>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Products</a>
+                    <a href="cart.html" class="active">Cart <i class="fas fa-shopping-cart"></i></a>
+                    <a href="manage-cart.html">Manage Cart</a>
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-header">
+                <h1>Shopping Cart</h1>
+                <p>Review your selected products</p>
+            </div>
+
+            <div class="cart-content">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=100&h=100&fit=crop" alt="MacBook Pro">
+                        </div>
+                        <div class="item-details">
+                            <h3>MacBook Pro 14"</h3>
+                            <p class="item-description">Apple M2 Pro chip, 16GB RAM, 512GB SSD</p>
+                            <div class="item-price">$1,999</div>
+                        </div>
+                        <div class="item-quantity">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="quantity-input">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="item-total">
+                            <span>$1,999</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="remove-btn">
+                                <i class="fas fa-trash"></i>
+                                Remove
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=100&h=100&fit=crop" alt="iPhone 15 Pro">
+                        </div>
+                        <div class="item-details">
+                            <h3>iPhone 15 Pro</h3>
+                            <p class="item-description">A17 Pro chip, 256GB, Titanium design</p>
+                            <div class="item-price">$999</div>
+                        </div>
+                        <div class="item-quantity">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="2" min="1" class="quantity-input">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="item-total">
+                            <span>$1,998</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="remove-btn">
+                                <i class="fas fa-trash"></i>
+                                Remove
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop" alt="Sony WH-1000XM5">
+                        </div>
+                        <div class="item-details">
+                            <h3>Sony WH-1000XM5</h3>
+                            <p class="item-description">Wireless noise-canceling headphones</p>
+                            <div class="item-price">$349</div>
+                        </div>
+                        <div class="item-quantity">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" class="quantity-input">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="item-total">
+                            <span>$349</span>
+                        </div>
+                        <div class="item-actions">
+                            <button class="remove-btn">
+                                <i class="fas fa-trash"></i>
+                                Remove
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <div class="summary-card">
+                        <h3>Order Summary</h3>
+                        
+                        <div class="summary-item">
+                            <span>Subtotal:</span>
+                            <span>$4,346</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Shipping:</span>
+                            <span>$25</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Tax (8%):</span>
+                            <span>$348</span>
+                        </div>
+                        
+                        <div class="summary-divider"></div>
+                        
+                        <div class="summary-total">
+                            <span>Total:</span>
+                            <span>$4,719</span>
+                        </div>
+                        
+                        <div class="coupon-section">
+                            <label for="coupon">Discount Code:</label>
+                            <div class="coupon-input">
+                                <input type="text" id="coupon" placeholder="Enter discount code">
+                                <button class="apply-coupon">Apply</button>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-actions">
+                            <a href="index.html" class="continue-shopping">
+                                <i class="fas fa-arrow-left"></i>
+                                Continue Shopping
+                            </a>
+                            <a href="manage-cart.html" class="manage-cart-btn">
+                                <i class="fas fa-edit"></i>
+                                Manage Cart
+                            </a>
+                            <a href="checkout.html" class="checkout-btn">
+                                <i class="fas fa-credit-card"></i>
+                                Proceed to Checkout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty Cart Message (Hidden by default) -->
+            <div class="empty-cart" style="display: none;">
+                <div class="empty-cart-content">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h2>Your cart is empty</h2>
+                    <p>You haven't added any products to your cart yet</p>
+                    <a href="index.html" class="start-shopping-btn">
+                        <i class="fas fa-shopping-bag"></i>
+                        Start Shopping
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Our Store</h3>
+                    <p>Best online store for secure shopping</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Products</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="manage-cart.html">Manage Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: info@store.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Our Store. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
